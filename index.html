@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ultimate Todo App</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>Todo App</h1>
+        <button id="darkToggle">🌙 Toggle Theme</button>
+    </div>
+
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <div class="input-area">
+        <input type="text" id="taskInput" placeholder="Task...">
+        <input type="date" id="dateInput">
+        <select id="priorityInput">
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select>
+        <button id="addBtn">Add</button>
+    </div>
+
+    <div class="search-sort-area">
+        <input type="text" id="searchInput" placeholder="Search task...">
+        <select id="sortInput">
+            <option value="newest">Newest First</option>
+            <option value="date">By Due Date</option>
+            <option value="priority">By Priority (High -> Low)</option>
+        </select>
+    </div>
+
+    <div class="filters">
+        <div class="filter-btns">
+            <button onclick="setFilter('all')">All</button>
+            <button onclick="setFilter('active')">Active</button>
+            <button onclick="setFilter('completed')">Completed</button>
+        </div>
+        <button id="clearCompletedBtn" class="danger-btn">🧹 Clear Completed</button>
+    </div>
+
+    <p id="taskCount">Total: 0 | Completed: 0</p>
+
+    <ul id="taskList"></ul>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

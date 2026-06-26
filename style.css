@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter', sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    padding:40px 15px;
+    color:#e5e7eb;
+    background:
+    radial-gradient(circle at 20% 20%, #4f46e5, transparent 40%),
+    radial-gradient(circle at 80% 80%, #06b6d4, transparent 40%),
+    linear-gradient(135deg,#020617,#0f172a);
+    transition:0.3s;
+}
+
+.container{
+    width:100%;
+    max-width:860px;
+    padding:28px;
+    border-radius:24px;
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.12);
+    backdrop-filter: blur(22px);
+    box-shadow:0 30px 80px rgba(0,0,0,0.6);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h1{
+    font-size:32px;
+    background: linear-gradient(90deg,#60a5fa,#22d3ee,#a78bfa);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+/* PROGRESS BAR (NEW) */
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #22d3ee, #6366f1);
+    transition: width 0.4s ease;
+}
+
+button{
+    padding:12px;
+    border-radius:14px;
+    border:none;
+    cursor:pointer;
+    font-weight:600;
+    background:linear-gradient(135deg,#6366f1,#22d3ee);
+    color:#0b1020;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+}
+
+.danger-btn {
+    background: linear-gradient(135deg, #f43f5e, #e11d48);
+    color: #fff;
+}
+
+.input-area{
+    display:grid;
+    grid-template-columns:2.5fr 1fr 1fr auto;
+    gap:12px;
+    margin:15px 0;
+}
+
+input, select{
+    padding:12px;
+    border-radius:14px;
+    border:1px solid rgba(255,255,255,0.1);
+    background:rgba(255,255,255,0.04);
+    color:#fff;
+    outline:none;
+}
+
+select option {
+    background: #0f172a;
+    color: #fff;
+}
+
+/* SEARCH & SORT AREA (NEW) */
+.search-sort-area {
+    display: flex;
+    gap: 12px;
+    margin: 10px 0;
+}
+
+#searchInput {
+    flex: 2;
+}
+
+#sortInput {
+    flex: 1;
+}
+
+/* FILTER */
+.filters{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:10px;
+    margin-bottom: 15px;
+}
+
+.filter-btns {
+    display: flex;
+    gap: 10px;
+    flex: 1;
+}
+
+.filter-btns button{
+    flex:1;
+    background:rgba(255,255,255,0.06);
+    color:#fff;
+    border:1px solid rgba(255,255,255,0.1);
+}
+
+/* TASK LIST */
+li{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:16px;
+    margin-bottom:12px;
+    border-radius:18px;
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.08);
+    transition:0.3s;
+}
+
+li:hover{
+    transform:translateY(-3px);
+}
+
+.task-info{
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+}
+
+.text{
+    font-size:16px;
+    font-weight:600;
+}
+
+.high{color:#ff4d6d;font-weight:700;}
+.medium{color:#fbbf24;font-weight:700;}
+.low{color:#34d399;font-weight:700;}
+
+.completed .text{
+    text-decoration:line-through;
+    opacity:0.5;
+}
+
+li button{
+    padding:6px 10px;
+    border-radius:10px;
+    margin-left:5px;
+    font-size:12px;
+}
+
+/* ================= LIGHT MODE ================= */
+body.light{
+    background:#f5f7fb;
+    color:#111827;
+}
+
+body.light .container{
+    background:#ffffff;
+    border:1px solid #e5e7eb;
+    box-shadow:0 20px 50px rgba(0,0,0,0.08);
+}
+
+body.light input,
+body.light select,
+body.light select option {
+    background:#f9fafb;
+    color:#111827;
+    border:1px solid #e5e7eb;
+}
+
+body.light li{
+    background:#ffffff;
+    border:1px solid #e5e7eb;
+}
+
+body.light .filter-btns button{
+    background:#f3f4f6;
+    color:#111827;
+    border:1px solid #e5e7eb;
+}
+
+body.light button:not(.danger-btn){
+    color:#fff;
+}
+
+body.light .progress-container {
+    background: #e5e7eb;
+}
